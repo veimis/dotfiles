@@ -1,3 +1,6 @@
+" Disable backward compatibility for vi
+set nocompatible
+
 " Execute pathogen to load plugins
 execute pathogen#infect()
 
