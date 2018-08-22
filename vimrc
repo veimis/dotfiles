@@ -11,6 +11,12 @@ syntax on
 " loading on
 filetype plugin indent on
 
+" Serach into subfolders. Adds tab-completion for all file realted tasks
+set path+=**
+
+" Display all matching files on tab-complete
+set wildmenu
+
 " Tab/space options: Tabs are always 2 spaces. Tabs are not transformed to
 " spaces.
 set tabstop=2
@@ -32,6 +38,10 @@ set splitright
 " netrw directory browser settings
 " Set width to 25%
 let g:netrw_winsize = 25
+
+" CTAGS
+" Create tags file (requires ctags installed)
+command! MakeTags !ctags -R .
 
 " Clipboard
 " On Ubuntu default vim does not have clipboard support (vim --version:
