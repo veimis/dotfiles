@@ -43,6 +43,10 @@ let g:netrw_winsize = 25
 " Create tags file (requires ctags installed)
 command! MakeTags !ctags -R .
 
+" Mappings/shortcuts
+" Map f7 to insert date in insert mode (format yyyy-mm-dd)
+inoremap <F7> <C-R>=strftime('%Y-%m-%d')<CR>
+
 " Clipboard
 " On Ubuntu default vim does not have clipboard support (vim --version:
 " -clipboard). Install vim-gnome to add cliboard support.
